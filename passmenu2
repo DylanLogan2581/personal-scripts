@@ -44,7 +44,11 @@ while [ "$DONE" -eq 0 ] ; do
       # not a directory so it must be a real password entry
   
       if [[ $typeit -eq 0 ]]; then
-        pass show -c "$SELECTION" 2>/dev/null
+        if [ "$entry" = "otp" ] ; then
+          pass otp -c "$SELECTION" 2>/dev/null
+          else
+	  pass show -c "$SELECTION" 2>/dev/null
+	fi
       else
         xdotool - <<<"type --clearmodifiers -- $(pass show "$SELECTION" | head -n 1)"
       fi
