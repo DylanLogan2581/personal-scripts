@@ -1,0 +1,5 @@
+HOME="/home/dylan/.local/share/librewolf-home"
+[ -d ${HOME} ] || mkdir -p "${HOME}"
+
+exec /usr/bin/librewolf "$@"
+

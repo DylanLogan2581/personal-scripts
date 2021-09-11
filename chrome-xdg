@@ -1,0 +1,5 @@
+HOME="/home/dylan/.local/share/chrome-home"
+[ -d ${HOME} ] || mkdir -p "${HOME}"
+
+exec /usr/bin/google-chrome-stable "$@"
+
