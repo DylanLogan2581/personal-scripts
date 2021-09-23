@@ -1,0 +1,2 @@
+chown -R $USER:$USER ~
+
